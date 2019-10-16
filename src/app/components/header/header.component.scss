@@ -3,10 +3,18 @@
   display: flex;
   flex-wrap: nowrap;
   padding: 25px;
-}
-
-nav {
-  display: flex;
-  padding-left: 20%;
-  padding-right: 20%;
+  .logo-container {
+    flex-basis: 15em;
+    padding-left: 50px;
+  }
+  nav {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-between;
+    .nav-item {
+      color: black;
+      flex-basis: 15%;
+      text-decoration: none;
+    }
+  }
 }
