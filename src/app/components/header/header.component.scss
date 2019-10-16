@@ -2,15 +2,22 @@
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
-  padding: 25px;
+  padding: 25px 50px;
   .logo-container {
-    flex-basis: 15em;
+    flex: 1;
     padding-left: 50px;
   }
+  .spacer {
+    flex-grow: 1;
+  }
   nav {
-    flex-basis: 40%;
+    a:hover {
+      text-decoration: underline;
+    }
+    flex: 1;
     display: flex;
     justify-content: space-between;
+    padding-right: 50px;
     .nav-item {
       color: black;
       flex-basis: 15%;
