@@ -23,5 +23,8 @@
       flex-basis: 15%;
       text-decoration: none;
     }
+    .router-link-active {
+      text-decoration: underline;
+    }
   }
 }
