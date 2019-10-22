@@ -8,7 +8,7 @@
 /bazel-out
 
 # config file
-config.js
+config.ts
 
 # dependencies
 /node_modules
