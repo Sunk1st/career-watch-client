@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   private getData(): void {
     this.youtubeService.getHomeData().subscribe(x => {
       console.log(x);
-      this.currentData.next(x);
+      // this.currentData.next(x);
     });
   }
 }
