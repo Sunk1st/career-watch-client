@@ -1,3 +1,5 @@
+@import './../../stylesheets/common.scss';
+
 .home-container {
   .image-container {
     background-color: black;
@@ -20,13 +22,13 @@
         .info {
           flex: 1;
           .info-text {
-            color: white;
+            color: $cw-white;
             font-weight: bold;
             font-size: 50px;
           }
           .youtube-button {
-            background-color: #da9b00;
-            color: white;
+            background-color: $cw-orange;
+            color: $cw-white;
             font-size: 18px;
             margin-top: 10px;
           }
@@ -35,7 +37,7 @@
     }
   }
   .youtube-videos-container {
-    padding-top: 25px;
+    padding-top: $vertical-padding;
     align-items: center;
     display: flex;
     flex-direction: column;
