@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { YoutubeVideo, YoutubeVideoAPIResponse } from 'src/app/lib/interfaces';
 
@@ -20,13 +21,13 @@ export class YoutubeService {
 
   constructor(private http: HttpClient) {}
 
-  getVideos() {
-    this.http
+  fetchVideos() {
+    return this.http
       .get<YoutubeVideoAPIResponse>('http://localhost:3000/api/videos')
-      .subscribe(res => {
-        this.videos = res.videos;
-        console.log(this.videos);
-        this.videoSubject.next([...this.videos]);
-      });
+      .pipe(
+        map((response: YoutubeVideoAPIResponse) => {
+          return response.videos;
+        })
+      );
   }
 }

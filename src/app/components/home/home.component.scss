@@ -34,4 +34,14 @@
       }
     }
   }
+  .youtube-videos-container {
+    padding-top: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .videos-title {
+      color: black;
+      font-size: 30px;
+    }
+  }
 }

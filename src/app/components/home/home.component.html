@@ -17,4 +17,18 @@
       </div>
     </div>
   </div>
+  <div class="youtube-videos-container">
+    <div class="videos-title">LATESTS VIDEOS</div>
+    <ng-container *ngFor="let video of currentVideos">
+      <iframe
+        width="560"
+        height="315"
+        [src]="video.link | safe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </ng-container>
+    <div class="youtube-video"></div>
+  </div>
 </div>

@@ -15,6 +15,8 @@ import { HomeComponent } from './components/home/home.component';
 import { StoreComponent } from './components/store/store.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 
+import { SafePipe } from './pipes/safe/safe.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { VideoListComponent } from './components/video-list/video-list.component
     HeaderComponent,
     HomeComponent,
     StoreComponent,
-    VideoListComponent
+    VideoListComponent,
+    SafePipe
   ],
   imports: [
     AppRoutingModule,
