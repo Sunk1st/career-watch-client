@@ -18,16 +18,26 @@
     </div>
   </div>
   <div class="youtube-videos-container">
-    <div class="videos-title">LATESTS VIDEOS</div>
-    <ng-container *ngFor="let video of currentVideos">
-      <iframe
-        width="560"
-        height="315"
-        [src]="video.link | safe"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </ng-container>
+    <div class="videos-title">LATEST VIDEOS</div>
+    <div class="videos-container">
+      <ng-container *ngIf="isLoading === false">
+        <ng-container *ngFor="let video of currentVideos">
+          <iframe
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            frameborder="0"
+            height="315"
+            width="560"
+            [src]="video.link | safe"
+          ></iframe>
+        </ng-container>
+      </ng-container>
+      <mat-progress-spinner
+        *ngIf="isLoading === true"
+        color="primary"
+        mode="indeterminate"
+      >
+      </mat-progress-spinner>
+    </div>
   </div>
 </div>
