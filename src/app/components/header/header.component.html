@@ -1,12 +1,15 @@
 <div
   class="header-container"
-  fxLayout="row nowrap"
+  fxLayout.xs="column wrap"
+  fxLayout.sm="column wrap"
+  fxLayout.md="row nowrap"
+  fxLayout.lg="row nowrap"
+  fxLayout.xl="row nowrap"
   fxLayoutAlign="center center"
 >
   <a
-    class="logo-container"
-    fxFlex.xs="200px"
-    fxFlex.sm="200px"
+    fxFlex.xs="42.8px"
+    fxFlex.sm="42.8px"
     fxFlex.md="200px"
     fxFlex.lg="200px"
     fxFlex.xl="200px"
@@ -14,13 +17,34 @@
   >
     <img
       alt="Career Watch"
-      class="logo-settings"
+      fxFlex.xs="200px"
+      fxFlex.sm="200px"
+      fxFlex.md="200px"
+      fxFlex.lg="200px"
+      fxFlex.xl="200px"
       src="./../../../assets/CW_logo_white.png"
-      width="80%"
     />
   </a>
-  <div fxFlex="grow"></div>
-  <nav fxFlex="grow" fxLayout="row nowrap" fxLayoutAlign="flex-end">
+  <div
+    fxFlex.xs="10px"
+    fxFlex.sm="10px"
+    fxFlex.md="grow"
+    fxFlex.lg="grow"
+    fxFlex.xl="grow"
+  ></div>
+  <nav
+    fxFlex="grow"
+    fxLayout.xs="column wrap"
+    fxLayout.sm="column wrap"
+    fxLayout.md="row nowrap"
+    fxLayout.lg="row nowrap"
+    fxLayout.xl="row nowrap"
+    fxLayoutAlign.xs="center center"
+    fxLayoutAlign.sm="center center"
+    fxLayoutAlign.md="flex-end"
+    fxLayoutAlign.lg="flex-end"
+    fxLayoutAlign.xl="flex-end"
+  >
     <a
       class="nav-item"
       routerLink="/home"
@@ -28,18 +52,28 @@
       [routerLinkActiveOptions]="{ exact: true }"
       >HOME</a
     >
+    <div
+      class="spacer"
+      fxFlex.xs="10px"
+      fxFlex.sm="10px"
+      fxFlex.md="25px"
+      fxFlex.lg="25px"
+      fxFlex.xl="25px"
+    ></div>
     <a
       class="nav-item"
       routerLink="/videos"
       routerLinkActive="router-link-active"
       >VIDEOS</a
     >
-    <!-- <a
-      class="nav-item"
-      routerLink="/store"
-      routerLinkActive="router-link-active"
-      >STORE</a
-    > -->
+    <div
+      class="spacer"
+      fxFlex.xs="10px"
+      fxFlex.sm="10px"
+      fxFlex.md="25px"
+      fxFlex.lg="25px"
+      fxFlex.xl="25px"
+    ></div>
     <a
       class="nav-item"
       routerLink="/contact"
