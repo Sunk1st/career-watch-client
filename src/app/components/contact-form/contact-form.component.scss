@@ -1,0 +1,10 @@
+@import './../../stylesheets/common.scss';
+
+.contact-form-container {
+  background-color: $cw-orange;
+  .contact-form {
+    .form-title {
+      font-size: 25px;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 @import './../../stylesheets/common.scss';
 
 .header-container {
-  padding: $spacing-setting-one 11%;
+  padding-top: $spacing-setting-one;
+  padding-bottom: $spacing-setting-one;
   nav {
     a:hover {
       text-decoration: underline;

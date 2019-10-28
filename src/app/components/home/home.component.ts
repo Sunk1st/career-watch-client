@@ -21,10 +21,10 @@ export class HomeComponent implements OnInit {
     this.isLoading = true;
     this.youtubeService.fetchVideos().subscribe((response: YoutubeVideo[]) => {
       this.isLoading = false;
+      console.log(response);
       this.currentVideos = this.sortVideosByDate(response)
         .slice(response.length - 4, response.length)
         .reverse();
-      console.log(this.currentVideos);
     });
   }
 
