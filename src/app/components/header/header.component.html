@@ -1,5 +1,17 @@
-<div class="header-container">
-  <a class="logo-container" routerLink="/home">
+<div
+  class="header-container"
+  fxLayout="row nowrap"
+  fxLayoutAlign="center center"
+>
+  <a
+    class="logo-container"
+    fxFlex.xs="200px"
+    fxFlex.sm="200px"
+    fxFlex.md="200px"
+    fxFlex.lg="200px"
+    fxFlex.xl="200px"
+    routerLink="/home"
+  >
     <img
       alt="Career Watch"
       class="logo-settings"
@@ -7,8 +19,8 @@
       width="80%"
     />
   </a>
-  <div class="spacer"></div>
-  <nav>
+  <div fxFlex="grow"></div>
+  <nav fxFlex="grow" fxLayout="row nowrap" fxLayoutAlign="flex-end">
     <a
       class="nav-item"
       routerLink="/home"

@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
 
   public currentVideos: YoutubeVideo[];
   public isLoading = false;
-  public test = 'https://www.youtube.com/embed/4OFa1BeAVvo';
 
   ngOnInit() {
     this.fetchVideos();
