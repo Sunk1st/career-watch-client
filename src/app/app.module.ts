@@ -6,8 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
@@ -20,6 +23,7 @@ import { StoreComponent } from './components/store/store.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 
 import { SafePipe } from './pipes/safe/safe.pipe';
+import { ConsultationComponent } from './components/consultation/consultation.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { SafePipe } from './pipes/safe/safe.pipe';
     HomeComponent,
     StoreComponent,
     VideoListComponent,
-    SafePipe
+    SafePipe,
+    ConsultationComponent
   ],
   imports: [
     AppRoutingModule,
@@ -39,7 +44,10 @@ import { SafePipe } from './pipes/safe/safe.pipe';
     FlexLayoutModule,
     HttpClientModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

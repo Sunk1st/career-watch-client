@@ -7,6 +7,19 @@
     <div class="sub-title-2">
       Send us a message and we'll respond as soon as possible
     </div>
-    <form></form>
+    <form [formGroup]="contactForm">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea matInput formControlName="message"></textarea>
+      </mat-form-field>
+    </form>
   </div>
 </div>
