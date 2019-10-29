@@ -4,14 +4,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EMAIL_VALIDATOR } from 'src/app/lib/validators/email/email-validatior';
 import { FIRST_NAME_VALIDATOR } from 'src/app/lib/validators/firstName/first-name-validator';
 
-const requiredEmailErrorMsg = 'Email Address is Required';
-const emailErrorMsg = 'Please Enter a Valid Email Address';
-
-const requiredFirstNameErrorMsg = 'First Name is Required';
-const firstNameErrorMsg = 'Please Enter a Valid First Name';
-
-const requiredMessageErrorMsg = 'Message is Required';
-const messageErrorMsg = 'Please Enter a Valid Message';
+import {
+  requiredEmailErrorMsg,
+  requiredFirstNameErrorMsg,
+  requiredMessageErrorMsg,
+  invalidEmailErrorMsg,
+  invalidFirstNameErrorMsg,
+  invalidMessageErrorMsg
+} from 'src/app/lib/error-messages';
 
 @Component({
   selector: 'app-contact-form',
@@ -47,17 +47,19 @@ export class ContactFormComponent implements OnInit {
   public getFirstNameError() {
     return this.firstName.value === ''
       ? requiredFirstNameErrorMsg
-      : firstNameErrorMsg;
+      : invalidFirstNameErrorMsg;
   }
 
   public getEmailError() {
-    return this.email.value === '' ? requiredEmailErrorMsg : emailErrorMsg;
+    return this.email.value === ''
+      ? requiredEmailErrorMsg
+      : invalidEmailErrorMsg;
   }
 
   public getMessageError() {
     return this.message.value === ''
       ? requiredMessageErrorMsg
-      : messageErrorMsg;
+      : invalidMessageErrorMsg;
   }
 
   public submitForm() {
