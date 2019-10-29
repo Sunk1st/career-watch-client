@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
+import { EMAIL_VALIDATOR } from 'src/app/lib/validators/email/email-validatior';
+
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -9,25 +11,17 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class ContactFormComponent implements OnInit {
   contactForm: FormGroup;
 
-  get firstName() {
-    return this.contactForm.get('firstName');
-  }
-
-  get email() {
-    return this.contactForm.get('email');
-  }
-
-  get message() {
-    return this.contactForm.get('messsage');
-  }
-
   constructor() {}
 
   ngOnInit() {
     this.contactForm = new FormGroup({
       firstName: new FormControl(''),
-      email: new FormControl(''),
+      email: new FormControl('', EMAIL_VALIDATOR),
       message: new FormControl('')
     });
+  }
+
+  public submitForm() {
+    console.log(this.contactForm, 'Submitting');
   }
 }

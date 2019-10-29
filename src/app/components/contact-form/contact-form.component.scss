@@ -1,10 +1,21 @@
 @import './../../stylesheets/common.scss';
 
 .contact-form-container {
-  background-color: $cw-orange;
+  padding-top: $spacing-setting-one;
+  padding-bottom: $spacing-setting-one;
+  background-color: $cw-gray;
   .contact-form {
+    padding: $spacing-setting-one;
+    background-color: white;
+    border-radius: 25px;
     .form-title {
       font-size: 25px;
+    }
+    .sub-title {
+      margin-top: $spacing-setting-one;
+    }
+    form {
+      margin-top: $spacing-setting-one;
     }
   }
 }
