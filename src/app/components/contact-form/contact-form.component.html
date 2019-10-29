@@ -23,14 +23,27 @@
       <mat-form-field appearance="outline" floatLabel="always">
         <mat-label>First Name</mat-label>
         <input matInput formControlName="firstName" />
+        <mat-error
+          *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+        >
+          {{ getFirstNameError() }}
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline" floatLabel="always">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" />
+        <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+          {{ getEmailError() }}
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline" floatLabel="always">
         <mat-label>Message</mat-label>
         <textarea matInput formControlName="message"></textarea>
+        <mat-error
+          *ngIf="message.invalid && (message.dirty || message.touched)"
+        >
+          {{ getMessageError() }}
+        </mat-error>
       </mat-form-field>
       <button mat-raised-button (click)="submitForm()" color="primary">
         Send Message
