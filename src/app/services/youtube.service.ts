@@ -14,7 +14,6 @@ export class YoutubeService {
       .get<YoutubeVideoAPIResponse>('http://localhost:3000/api/videos')
       .pipe(
         map((response: YoutubeVideoAPIResponse) => {
-          console.log(response);
           return response.videos;
         })
       );

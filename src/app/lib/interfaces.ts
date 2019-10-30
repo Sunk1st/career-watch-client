@@ -1,3 +1,9 @@
+export interface ContactEmail {
+  firstName: string;
+  email: string;
+  message: string;
+}
+
 export interface YoutubeVideo {
   career: string;
   created: Date;

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { EMAIL_VALIDATOR } from 'src/app/lib/validators/email/email-validatior';
-import { FIRST_NAME_VALIDATOR } from 'src/app/lib/validators/firstName/first-name-validator';
+import { EMAIL_VALIDATOR, FIRST_NAME_VALIDATOR } from 'src/app/lib/validators';
 
 import {
   requiredEmailErrorMsg,
@@ -12,6 +11,8 @@ import {
   invalidFirstNameErrorMsg,
   invalidMessageErrorMsg
 } from 'src/app/lib/error-messages';
+
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -32,6 +33,8 @@ export class ContactFormComponent implements OnInit {
   get message() {
     return this.contactForm.get('message');
   }
+
+  constructor(private contactService: ContactService) {}
 
   ngOnInit() {
     this.contactForm = new FormGroup({
@@ -63,6 +66,25 @@ export class ContactFormComponent implements OnInit {
   }
 
   public submitForm() {
-    console.log(this.contactForm, 'Submitting');
+    if (this.contactForm.valid === false) {
+      if (this.firstName.valid === false) {
+        this.firstName.markAsTouched();
+      }
+      if (this.email.valid === false) {
+        this.email.markAsTouched();
+      }
+      if (this.message.valid === false) {
+        this.message.markAllAsTouched();
+      }
+      return;
+    }
+
+    const contactObj = {
+      firstName: this.firstName.value,
+      email: this.email.value,
+      message: this.message.value
+    };
+
+    this.contactService.sendEmail(contactObj);
   }
 }
