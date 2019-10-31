@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material';
 
 import { EMAIL_VALIDATOR, FIRST_NAME_VALIDATOR } from 'src/app/lib/validators';
 
@@ -34,7 +36,24 @@ export class ContactFormComponent implements OnInit {
     return this.contactForm.get('message');
   }
 
-  constructor(private contactService: ContactService) {}
+  constructor(
+    private contactService: ContactService,
+    private iconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) {
+    iconRegistry.addSvgIcon(
+      'email',
+      domSanitizer.bypassSecurityTrustResourceUrl(
+        './../../../../assets/icons/email_icon.svg'
+      )
+    );
+    iconRegistry.addSvgIcon(
+      'account_circle',
+      domSanitizer.bypassSecurityTrustResourceUrl(
+        './../../../../assets/icons/firstName_icon.svg'
+      )
+    );
+  }
 
   ngOnInit() {
     this.contactForm = new FormGroup({

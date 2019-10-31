@@ -10,6 +10,7 @@
     <mat-form-field appearance="outline" floatLabel="always">
       <mat-label>First Name</mat-label>
       <input matInput formControlName="firstName" />
+      <mat-icon matSuffix>account_circle</mat-icon>
       <mat-error
         *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
       >
@@ -19,6 +20,7 @@
     <mat-form-field appearance="outline" floatLabel="always">
       <mat-label>Email</mat-label>
       <input matInput formControlName="email" />
+      <mat-icon matSuffix>email</mat-icon>
       <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
         {{ getEmailError() }}
       </mat-error>
@@ -26,9 +28,7 @@
     <mat-form-field appearance="outline" floatLabel="always">
       <mat-label>Message</mat-label>
       <textarea matInput formControlName="message"></textarea>
-      <mat-error
-        *ngIf="message.invalid && (message.dirty || message.touched)"
-      >
+      <mat-error *ngIf="message.invalid && (message.dirty || message.touched)">
         {{ getMessageError() }}
       </mat-error>
     </mat-form-field>

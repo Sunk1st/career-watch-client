@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -25,6 +26,8 @@ import { VideoListComponent } from './components/video-list/video-list.component
 
 import { SafePipe } from './pipes/safe/safe.pipe';
 import { ConsultationComponent } from './components/consultation/consultation.component';
+import { EmailListFormComponent } from './components/forms/email-list-form/email-list-form.component';
+import { ConsultationFormComponent } from './components/forms/consultation-form/consultation-form.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { ConsultationComponent } from './components/consultation/consultation.co
     StoreComponent,
     VideoListComponent,
     SafePipe,
-    ConsultationComponent
+    ConsultationComponent,
+    EmailListFormComponent,
+    ConsultationFormComponent
   ],
   imports: [
     AppRoutingModule,
@@ -47,6 +52,7 @@ import { ConsultationComponent } from './components/consultation/consultation.co
     HttpClientModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule
