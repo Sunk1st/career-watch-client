@@ -1,3 +1,14 @@
-<footer class="footer-container">
-  <div>{{ currentYear }} Career Watch</div>
+<footer class="footer-container" fxLayout="column">
+  <div class="row1" fxLayout="row nowrap" fxLayoutAlign="center center">
+    <a fxFlex="200px" routerLink="/home">
+      <img
+        alt="Career Watch Image"
+        fxFlex="200px"
+        src="./../../../assets/CW_logo_white.png"
+      />
+    </a>
+  </div>
+  <div fxLayout="row nowrap" fxLayoutAlign="center center">
+    {{ currentYear }} Career Watch
+  </div>
 </footer>

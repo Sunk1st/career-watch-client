@@ -65,7 +65,7 @@ export class ContactFormComponent implements OnInit {
       : invalidMessageErrorMsg;
   }
 
-  public submitForm() {
+  public submitContactForm() {
     if (this.contactForm.valid === false) {
       if (this.firstName.valid === false) {
         this.firstName.markAsTouched();
@@ -80,11 +80,14 @@ export class ContactFormComponent implements OnInit {
     }
 
     const contactObj = {
-      firstName: this.firstName.value,
       email: this.email.value,
+      firstName: this.firstName.value,
+      id: null,
       message: this.message.value
     };
 
-    this.contactService.sendEmail(contactObj);
+    this.contactService.sendContactMessage(contactObj).subscribe(response => {
+      console.log(response);
+    });
   }
 }

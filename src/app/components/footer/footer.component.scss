@@ -1,8 +1,8 @@
+@import './../../stylesheets//common.scss';
+
 .footer-container {
-  background-color: black;
-  color: white;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 100%;
-  height: 200px;
+  padding-top: $spacing-setting-one;
+  padding-bottom: $spacing-setting-one;
+  background-color: white;
+  color: black;
 }

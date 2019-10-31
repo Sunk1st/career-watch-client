@@ -15,7 +15,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
 
-import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactFormComponent } from './components/forms/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -29,6 +30,7 @@ import { ConsultationComponent } from './components/consultation/consultation.co
   declarations: [
     AppComponent,
     ContactFormComponent,
+    ContactComponent,
     FooterComponent,
     HeaderComponent,
     HomeComponent,

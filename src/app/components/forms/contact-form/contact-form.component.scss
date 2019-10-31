@@ -1,0 +1,17 @@
+@import './../../../stylesheets/common.scss';
+
+
+.contact-form {
+  padding: $spacing-setting-one;
+  background-color: white;
+  border-radius: 25px;
+  .form-title {
+    font-size: 25px;
+  }
+  .sub-title {
+    margin-top: $spacing-setting-one;
+  }
+  form {
+    margin-top: $spacing-setting-one;
+  }
+}
